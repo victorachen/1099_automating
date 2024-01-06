@@ -11,14 +11,14 @@ def map_llc(parkname):
     'Holiday':'Holiday Rancho Park, LLC',
     'Wishing Well':'Wishing Well Mobile Home Park, LLC',
     'Patrician':'Patrician Mobile Home Park',
-    'Mt Vista':'Mount Vista, LLC',
+    'Mount Vista':'Mount Vista, LLC',
     'Jian Personal':'Jian Chen',
     'Banning':'Banning Wilson Gardens, LLC'
     }
     for i in d:
         if i in parkname:
             return d[i]
-    return 'N/A'
+    return parkname
 
 def map_data_to_existing_pdf(person, llc, payer_tin, recipient_tin, street, city_state_zip, compensation, template_pdf_path, output_path):
     # Read the existing PDF template
