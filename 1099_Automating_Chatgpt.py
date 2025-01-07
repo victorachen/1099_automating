@@ -44,7 +44,7 @@ def map_data_to_existing_pdf(person, llc, payer_tin, recipient_tin, street, city
         can.drawString(58, 603, f"{street}")
         can.drawString(58, 579, f"{city_state_zip}")
         can.drawString(320, 662, f"{compensation}"+f"0")
-        can.drawString(431, 690, "23")
+        #can.drawString(431, 690, "23")
 
         # Save the canvas to the packet
         can.save()
@@ -63,14 +63,14 @@ def map_data_to_existing_pdf(person, llc, payer_tin, recipient_tin, street, city
 
 def main():
     # Read the Excel file into a DataFrame
-    excel_file = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\input_template.xlsx'
+    excel_file = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\input_template.xlsx'
     df = pd.read_excel(excel_file)
 
     # Path to existing PDF template
-    template_pdf_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\empty_template.pdf'
+    template_pdf_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\empty_template.pdf'
 
     # Output path for saving PDFs
-    output_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\chatgpt'
+    output_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\chatgpt'
 
     # Iterate through rows and map data onto existing PDF for each
     for index, row in df.iterrows():
@@ -98,8 +98,8 @@ def extract_third_page(input_pdf_path, output_pdf_path):
 
 def main():
     # Set up paths
-    folder1_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\chatgpt'
-    folder2_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\chatgpt_foremployees'
+    folder1_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\chatgpt'
+    folder2_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\chatgpt_foremployees'
 
     # Create Folder 2 if it doesn't exist
     if not os.path.exists(folder2_path):
@@ -141,8 +141,8 @@ def merge_pdfs(input_folder, output_path):
 
 if __name__ == "__main__":
     # Set up paths
-    input_folder_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\chatgpt_foremployees'
-    output_pdf_path = r'C:\Users\Lenovo\Documents\pycharmprojects\1099_automating\output_merged.pdf'
+    input_folder_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\chatgpt_foremployees'
+    output_pdf_path = r'C:\Users\vchen\OneDrive\Documents\pycharmprojects\1099_automating\output_merged.pdf'
 
 
     # Merge PDFs from the input folder
